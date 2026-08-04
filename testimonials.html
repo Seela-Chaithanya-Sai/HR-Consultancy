@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Testimonials - Talent Vista</title>
+    <link rel="icon" type="image/png" href="inminilogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+</head>
+    <style>
+
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+header {
+    margin-top: -100px;
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #6F2DBD;
+}
+footer {
+    background: #1B2233;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-grid p {
+    padding-top: 10px;
+    font-size: 18px;
+    width: 70%;
+}
+
+.footer-grid a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 7px;
+}
+
+
+.copyright {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+
+        
+       
+
+       
+
+        .hero {
+            background: #052541;
+            height: 68vh;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 90px;
+        }
+
+       
+      
+        .images img {
+            position: absolute;
+            width: 280px;
+            margin-left: -590px;
+           border:2px solid white;
+            object-fit: cover;
+            border-radius: 18px;
+            box-shadow: 0 4px 8px rgba(245, 201, 4, 0.6);
+            animation: flipLR 4s ease;
+            margin-top: 20px;
+        }
+
+        @keyframes flipLR {
+          
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+          .hero-content {
+            color:#fff;
+            box-sizing: border-box;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 16px;
+            background: linear-gradient(180deg, #5c40a7 0%, #390279 100%);
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            text-align:center;
+            margin-left: 340px;
+           
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: 600;
+            background: linear-gradient(90deg,#ffd700 0%, #ff8c00 50%, #ffffff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h3 {
+            font-size: 25px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 650px;
+            margin-bottom:30px;
+        }
+
+        .hero a {
+            color: #ffff;
+            font-size: 23px;
+            text-decoration: none;
+            background:#eebf04 ;
+            display: inline-block;
+            border-radius: 19px;
+            width: 220px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .hero a:hover{
+            color: #f9fbfc;
+            background: #1422db;
+            transform: translateY(-8px);
+            box-shadow: 15px 15px 15px  rgba(73, 7, 228, 0.65);
+        }
+
+        .stat-grid {
+             display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 25px;
+             box-sizing: border-box;
+            background: #e3e9ec;
+            padding: 20px;
+            border-radius: 14px;
+
+        }
+
+        .stat-card {
+               background: linear-gradient(180deg, #5c40a7 0%, #390279 100%);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,18,17,0.65);
+            border-left:3px solid #404049;
+             border-bottom:3px solid #404049;
+             align-items: center;
+             gap: 20px;
+               width: 100%;
+               max-width: 450px;
+               height: auto;
+               margin: 0 auto;
+             transition: transform 0.4s ease-in-out;
+        }
+
+        .stat-card:hover {
+              transform: translateY(-10px) scale(1.05);
+        }
+
+        .stat-card img {
+             width: 100%;
+            height: 190px;
+           border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .stat-card h2 {
+            font-size: 25px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .stat-card p {
+            font-size: 20px;
+            color: #fff;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .section {
+            padding: 50px 10px;
+            max-width: 1200px;
+            margin: auto;
+           
+        }
+
+        .section h2 {
+            font-size: 34px;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #100936;
+        }
+
+        .section .sub {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 50px;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+             box-sizing: border-box;
+            background: #e3e9ec;
+            padding: 20px;
+            border-radius: 14px;
+        }
+
+        .review-card {
+              background: linear-gradient(180deg, #5c40a7 0%, #390279 100%);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,18,17,0.65);
+            border-left:3px solid #404049;
+             border-bottom:3px solid #404049;
+             align-items: center;
+             gap: 20px;
+               width: 100%;
+               max-width: 450px;
+               height: auto;
+               margin: 0 auto;
+             transition: transform 0.4s ease-in-out;
+        }
+
+        .review-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .review-card img {
+            width: 100%;
+            height: 220px;
+           border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .review-card h3 {
+            font-size: 20px;
+            color: #fbfdfd;
+            text-align: center;
+        }
+
+        .review-card h5 {
+            text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .review-card .stars {
+            text-align: center;
+            color: #eebf04;
+            font-size: 20px;
+        }
+
+        .review-card p {
+              text-align: center;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .review-card h4 {
+              text-align: center;
+            font-size: 18px;
+            color: #f0d906;
+        }
+
+         .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+              box-sizing: border-box;
+            background: #e3e9ec;
+            padding: 20px;
+            border-radius: 14px;
+        }
+
+         .video-card {
+               background: linear-gradient(180deg, #5c40a7 0%, #390279 100%);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,18,17,0.65);
+            border-left:3px solid #404049;
+             border-bottom:3px solid #404049;
+             align-items: center;
+             gap: 20px;
+               width: 100%;
+               max-width: 450px;
+               height: auto;
+               margin: 0 auto;
+              transition: transform 0.4s ease-in-out;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+        }
+
+          .video-card img {
+            width: 100%;
+            height: 220px;
+           border-radius: 12px;
+            object-fit: cover;
+        }
+
+         .video-card .name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #f0c505;
+            text-align: center;
+        }
+
+        .video-card a{
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: 600;
+            margin-left: 80px;
+            display: inline-block;
+            background: #f9f9fa;
+            color: #0a06f0;
+            border-radius: 20px;
+            padding: 8px 10px;
+            margin-top: 10px;
+        }
+
+        .video-card a:hover {
+            color: #fff;
+            background: #0a06f0;
+        }
+
+        
+
+/*---------------------------------------------------------------------*/
+    
+/*---------------------------------------------------------------------*/
+    
+        
+/*---------------------------------------------------------------------*/
+    
+        /* Responsive rules for mobile */
+        @media (max-width: 768px) {
+
+               .nav-links {
+        position: absolute;
+        right: -100%;
+        top: 75px;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        transition: .4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero {
+        height: auto;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin-left: 4px;
+        height: auto;
+    }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+            .review-grid, .video-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+
+            .review-card, .video-card{
+                width: 100%;
+                max-width: none;
+                margin: 0 auto;
+                height: auto;
+                padding: 18px;
+            }
+
+            .video-card a{
+                margin-left: 80px;
+            }
+            .btn-outline1{
+                padding:10px 18px;
+            }
+
+            .footer-grid {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        
+        </style>
+
+<body>
+
+    <!--header section-->
+
+           <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <a href="index.html"><img src="hr consultancy.png" alt="logo"></a>
+
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="case.html">Case Studies</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="employer.html">Employer Section</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!---hero section-->
+    <section class="hero">
+        <div class="hero-wrapper">
+
+            <div class="images">
+                <img src="hr initial.png" alt="">
+            </div>
+
+            <div class="hero-content">
+                <h1>TALENT VISTA</h1>
+                <h3>India's Trusted HR Partner</h3>
+                <p>We connet top companies with top talent. Fast hiring, zero hassle, guaranteed results for your next 100 hires.</p>
+                <a href="services.html">SERVICES</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!--stats-->
+
+    <section class="section">
+        <h2>Our Impacts</h2>
+
+        <div class="stat-grid">
+
+            <div class="stat-card">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoVRs6l7BV7FIsoCyny6xAWsFZYVd1tOUCZb-pmb2D8g&s=10">
+             <h2>500+</h2>
+             <p>Partner Companies</p>
+            </div>
+
+              <div class="stat-card">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQza9JHK_N9d1WRoAZrHTo4HHq4tq4V2kNvKB-TPxnuUA&s=10">
+             <h2>5000+</h2>
+             <p>Placements</p>
+            </div>
+
+              <div class="stat-card">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAhjBr1lUF069Q4y4ouBV08FAPaMqZx2yGY_mfFgJB4A&s=10">
+             <h2>48 Hr</h2>
+             <p>Avg. Hiring</p>
+            </div>
+
+              <div class="stat-card">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7RIumSod1gK4ZWo7f5yiQ4VwPawTpE5r6B1T4wCDW6A&s=10">
+             <h2>10+</h2>
+             <p>Experience</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Text reveiws-->
+    <section class="section">
+        <h2> Reviews</h2>
+        <p class="sub">Trusted by 500+ companies across India.</p>
+
+        <div class="review-grid">
+
+            <!--cards-->
+            <div class="review-card">
+                <img src="rakhi photo.jpg" alt="">
+                <h3>Rakhi N.</h3><br>
+                 <h5>CEO, FinEdge Solutions</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Their executive search team found us a perfect CTO. 6 months later he is still with us. The guarantee actually works"</p>
+                
+            </div>
+
+               <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXfnAv8hwtnDhnjhztzbbqK_MLo5WFG24zmsQC1_Le4Q&s=10" alt="">
+                <h3>Fathima S.</h3><br>
+                <h5>Founder, Saasify</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Best part is their support. Even after placement they follow up for 3 months. True partnership, not just a vendor."</p>
+                
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkTWgTrDhv3H2aDMnxPFzX_Y7PW-IOva8LcDNs-m_eww&s=10" alt="">
+                <h3>Swathy G.</h3><br>
+                <h5>VP HR RetailMart</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Filled 50+ sales roles across 4 cities for us. Their pan-India network is unmatched. Highly recommend for bulk hiring."</p>
+                
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUYxct825XZY26o2RT0u3g63g-qfuMJJfFhXyPh5fkCg&s=10" alt="">
+                <h3>Chaithanya S.</h3><br>
+                <h5>HR Head, TechNova Pvt. Ltd.</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+                  <p>"Hired 12 developers in just 2 weeks. Quality was top notch and the process was super smooth. Best HR partner we have worked with."</p>
+               
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0UwLvvTASzCrVRN0MgliEB_vrMdLps2J6C9L2JYZFSw&s=10" alt="">
+                <h3>Pawan G.</h3><br>
+                <h5>Operations Head, Corriculots</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"Contract staffing was a lifesaver for oye project. Got 20 people onboarded in 48 hours. Very professional team."</p>
+                
+            </div>
+
+              <div class="review-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBSUI_HLFETRslEHAOq39FDxnJQF7_eV4GQQhrK2lQWA&s=10" alt="">
+                <h3>Govardhan K.</h3><br>
+                <h5>Talent Lead, GrowthX</h5>
+                 <div class="stars"><span style="color:rgb(246, 250, 13)">&#9733;&#9733;&#9733;&#9733;</span></div>
+                <p>"We reduced our hiring cost by 40% after switching to them. The candidates are pre-screened and job ready from day 1."</p>
+                
+            </div>
+
+           
+
+        </div>
+    </section>
+
+    <!--video section-->
+
+    <section class="section">
+
+        <h2>Video Reviews</h2>
+
+      <div class="video-grid">
+
+         <div class="video-card">
+            <img src="https://i.ytimg.com/vi/QWO_BIvEXcU/hqdefault.jpg?">
+            <div class="name">Mrs.Smith <br> </div>
+            <a href="https://youtu.be/QWO_BIvEXcU?si=bGbhyzqrui7PSDk7" >View Review</a>
+        </div>
+
+         <div class="video-card">
+            <img src="https://i.ytimg.com/vi/XD6y_XfnlmI/hqdefault.jpg?">
+            <div class="name">Mr.Martin <br> </div>
+            <a href="https://youtu.be/XD6y_XfnlmI?si=S6bv7ZR9PEdfj6wH" >View Review</a>
+        </div>
+
+         <div class="video-card">
+            <img src="https://i.ytimg.com/vi/A5s4OzUXGTE/hqdefault.jpg?">
+            <div class="name">Mrs.Shutter <br> </div>
+            <a href="https://youtu.be/A5s4OzUXGTE?si=dIufLTNlKxu4CI2m" >View Review</a>
+        </div>
+
+            <div class="video-card">
+            <img src="https://i.ytimg.com/vi/aJzuSqAXt9s/hqdefault.jpg?">
+            <div class="name">Mr.Banner <br> </div>
+            <a href="https://youtu.be/aJzuSqAXt9s?si=LMhWyRb1X80QB1Sx" >View Review</a>
+        </div>
+
+           <div class="video-card">
+            <img src="https://i.ytimg.com/vi/h0okARxzOqk/hqdefault.jpg?">
+            <div class="name">Mrs.Stark <br> </div>
+            <a href="https://youtu.be/h0okARxzOqk?si=VlHiDD6r9HH0G-7n" >View Review</a>
+        </div>
+
+           <div class="video-card">
+            <img src="https://i.ytimg.com/vi/cNVk8w86uwE/hqdefault.jpg?">
+            <div class="name">Mr.Strange<br></div>
+            <a href="https://youtu.be/cNVk8w86uwE?si=zF8csd1TRAdLOjeG" >View Review</a>
+        </div>
+
+        </div>
+        </section>
+
+        <!--footer section-->
+
+        <footer id="contact">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>TalentVista</h3>
+
+                <p>
+
+                    Helping organizations innovate and grow with confidence.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email : info@talentvista.com</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Mon-Fri : 9AM - 6PM</p>
+
+            </div>
+
+            <div>
+
+                <h3>Address</h3>
+
+                <p>
+
+                    5th Floor, Cyber Towers,<br>
+
+                    Hi-Tech City,<br>
+
+                    Hyderabad, Telangana,<br>
+
+                    India.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 TalentVista HR Consultancy. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+        <script>
+
+// ===============================
+// Hamburger Menu
+// ===============================
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
+
+hamburger.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("active");
+
+});
+
+
+        </script>
+
+</body>
+</html>
