@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Case Studies</title>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TalentVista</title>
+    <link rel="icon" type="image/png" href="inminilogo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="incss.css">
+
+    <style>
+        
+           *  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5f7fb;
+    color: #333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .08);
+    z-index: 1000;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 5%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #6F2DBD;
+}
+
+footer {
+    background: #1B2233;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-grid a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.copyright {
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 20px;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.case-hero {
+    background: linear-gradient(135deg, #0d1b3a 0%, #1e3a8a 100%);
+    color:white;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.case-hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.stats-section {
+    padding: 60px 20px;
+    background : #f8fafc;
+
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 40px;
+    color: #20c997;
+}
+
+.stat-item p {
+    color: #64748b;
+}
+
+.case-section {
+    padding: 80px 20px;
+
+}
+
+.case-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+.case-card {
+    display: flex;
+    gap: 40px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    margin-bottom: 60px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.case-img img{
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.case-content {
+    padding: 40px;
+    flex: 1;
+}
+
+.tag {
+    background-color: #dbeafe;
+    color: #1e40af;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.case-content h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.case-content p {
+    color: #475569;
+    margin-bottom: 12px;
+}
+
+.case-results {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.result h4 {
+    font-size: 28px;
+    color: #20c997;
+}
+
+.result span {
+    font-size: 14px;
+    color: #64748b;
+}
+
+.case-cta {
+    background-color: #0d1b3a;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.case-cta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #20c997;
+    color: white;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+
+
+
+@media(max-width:768px) {
+
+
+    .nav-links {
+        position: absolute;
+        right: -100%;
+        top: 75px;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        transition: .4s;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .container {
+        width: 100%;
+        height:auto;
+    }
+
+    .case-hero {
+        padding: 50px 20px;
+    }
+
+    .case-hero h1 {
+        font-size: 36px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .case-card {
+        flex-direction: column;
+    }
+
+    .case-img img{
+        width: 100%;
+        height: auto;
+    }
+
+    .case-content {
+        padding: 20px;
+    }
+
+    .case-cta h2 {
+        font-size: 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    </style>
+    </head>
+    <body>
+
+         <header>
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+            <img src="logo.png" alt="logo"></a>
+
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="case.html">Case Studies</a></li>
+                <li><a href="testimonials.html">Testimonials</a></li>
+                <li><a href="employer.html">Employer Section</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </nav>
+
+    </header>
+        <section class="case-hero">
+            <div class="container">
+                <h1>Success Stories That Speaks</h1>
+                <p>Real Hiring challenges. Real results. See how we helped 200+ companies scale their teams.</p>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stst-item">
+                        <h3>10,000+</h3>
+                        <p>Hires Made</p>
+                    </div>
+
+                    <div class="stst-item">
+                        <h3>15 days</h3>
+                        <p>Average Hiring Time</p>
+                </div>
+
+                <div class="stst-item">
+                    <h3>200+</h3>
+                    <p>Companies Served</p>
+            </div>
+
+            <div class="stst-item">
+                <h3>95% </h3>
+                <p>Client Retention</p>
+            </div>
+                </div>
+            </div>
+        
+        </section>
+
+        <section class="case-section">
+            <div class="container">
+                <h2>Features Case Studies</h2>
+
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="https://img.magnific.com/free-photo/lifestyle-beauty-fashion-people-emotions-concept-young-asian-female-office-manager-ceo-with-pleased-expression-standing-white-background-smiling-with-arms-crossed-chest_1258-59329.jpg?semt=ais_test_b&w=740&q=80">
+                        </div>
+                        <div class="case-content">
+                            <span class="tag">IT & SaaS</span>
+                            <h3>Hired 120 Developers in 45 Days</h3>
+                            <p><strong>Client:</strong>FineTech Startup, Banglore</p>
+                            <p><strong>Challenge:</strong>Needed to scale engineering team from 10 to 140 before product launch. In-house HR was too slow</p>
+                            <p><strong>Solution:</strong>We deployed 3 dedicated recruiters + used our tech talent pool + ran targeted hiring drives.</p>
+                            <div class="case-results">
+                                <div class="result">
+                                    <h4>120</h4>
+                                    <span>Developers Hired</span>
+                                </div>
+
+                                <div class="result">
+                                    <h4>45</h4>
+                                    <span>Days Taken</span>
+                                </div>
+
+                                <div class="result">
+                                    <h4>60%</h4>
+                                    <span>Cost Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="case-card">
+                    <div class="case-img">
+                        <img src="https://media.istockphoto.com/id/1394347360/photo/confident-young-black-businesswoman-standing-at-a-window-in-an-office-alone.jpg?s=612x612&w=0&k=20&c=tOFptpFTIaBZ8LjQ1NiPrjKXku9AtERuWHOElfBMBvY=">
+                    </div>
+                    <div class="case-content">
+                        <span class="tag">Manufacturing</span>
+                        <h3>Bulk hiring of 500+ plant workers</h3>
+                        <p><strong>Client:</strong>Auto Components MNC, Pune</p>
+                        <p><strong>Challenge:</strong>New plant launch required 500 skilled and unskilled workers in 2 months across 3 shifts</p>
+                        <p><strong>Solution:</strong>Pan-India job fairs, tie-ups with ITIs, and on-ground screening camps.</p>
+                        <div class="case-results">
+                            <div class="result">
+                                <h4>523</h4>
+                                <span>Workers Hired</span>
+                            </div>
+                            <div class="result">
+                                <h4>58</h4>
+                                <span>Days Taken</span>
+                            </div>
+                            <div class="result">
+                                <h4>98%</h4>
+                                <span>Retention</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-img">
+                    <img src="https://st2.depositphotos.com/2931363/6569/i/450/depositphotos_65699901-stock-photo-black-man-keeping-arms-crossed.jpg">
+                </div>
+                <div class="case-content">
+                    <span class="tag">E-Commerce</span>
+                    <h3>C-level Hiring for New CEO & CMO</h3>
+                    <p><strong>Client:</strong>D2C Brand, Mumbai</p>
+                    <p><strong>Challenge:</strong>Confidential search for leadership roles. Needed industry experts with scaling experience.</p>
+                    <p><strong>Solution:</strong>Executive Search + headhunting + 1.1 assesments. Maintained 100% confidentiality</p>
+                    <div class="case-result">
+                        <div class="result">
+                            <h4>2</h4>
+                            <span>CXOs Placed</span>
+                        </div>
+                        <div class="result">
+                            <h4>30</h4>
+                            <span>Days Taken</span>
+                        </div>
+                        <div class="result">
+                            <h4>3x</h4>
+                            <span>Revenue Growth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="case-cta">
+            <div class="container">
+                <h2>Want Results Like This?</h2>
+                <p>Let's Discuss how can we solve your hiring challenges.</p>
+                <a href="contact.html" class="btn-primary">Contact Us</a>
+            </div>
+        </section>
+
+        
+            <footer id="contact">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>TalentVista</h3>
+
+                <p>
+
+                    Helping organizations innovate and grow with confidence.
+
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Navigation</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="services.html">Services</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <p>Email : info@talentvista.com</p>
+
+                <p>Phone : +91 98765 43210</p>
+
+                <p>Mon-Fri : 9AM - 6PM</p>
+
+            </div>
+
+            <div>
+
+                <h3>Address</h3>
+
+                <p>
+
+                    5th Floor, Cyber Towers,<br>
+
+                    Hi-Tech City,<br>
+
+                    Hyderabad, Telangana,<br>
+
+                    India.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+
+            © 2026 TalentVista HR Consultancy. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+      <script>
+          
+             const navLinks = document.getElementById("navLinks"); 
+             const hamburger = document.getElementById("hamburger");
+            
+             
+            hamburger.addEventListener("click",function(){
+                navLinks.classList.toggle("active");
+            }); 
+    </script>
+
+    </body>
+</html>
